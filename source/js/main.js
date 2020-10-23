@@ -20,7 +20,7 @@ window.addEventListener('load', function () {
       })
     }
   };
-  sliderToggle('.promo-slider__tab', '.promp-slider__slide');
+  sliderToggle('.promo-slider__tab', '.promo-slider__slide');
   sliderToggle('.purchase__inset-link', '.purchase__terms-item');
 
   //scroll
@@ -71,42 +71,29 @@ window.addEventListener('load', function () {
   //Map
   const openMap = () => {
     let mapImg = document.querySelector('.about__location-map');
-    console.log("openMap -> mapImg", mapImg)
+
     let mapPopup = document.querySelector('.modal-map');
     let mapPopupBtnClose = mapPopup.querySelector('.modal-map__close');
 
+    mapImg.addEventListener('click', function (e) {
+      e.preventDefault();
+      mapPopup.classList.toggle('modal-map--open')
+    });
+    mapPopupBtnClose.addEventListener('click', function (e) {
+      e.preventDefault();
+      mapPopup.classList.remove('modal-map--open')
+    });
   };
   openMap();
+
+  //temporary stubs
+  const disableStubs = () => {
+    const disableStubsLinks = document.querySelectorAll('a[href=""]');
+    for (const link of disableStubsLinks) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+      })
+    }
+  }
+  disableStubs();
 });
-
-
-//сортировкa
-// let selectionAscending = document.querySelector(".selection-results__ascending");
-// let selectiondDscending = document.querySelector(".selection-results__descending");
-
-// selectionAscending.addEventListener("click", function (evt) {
-//     evt.preventDefault();
-//     sortMinus('data-price', true);
-// });
-// selectiondDscending.addEventListener("click", function (evt) {
-//     evt.preventDefault();
-//     sortMinus('data-price', false);
-// });
-
-// function sortMinus(dataType, op) {
-
-//     let ulList = document.querySelector('.results__list');
-//     let lis = document.querySelectorAll('.resulrs__list-item');
-
-//     let massLi = Array.from(lis);
-//     function compare(a, b) {
-//         let num1 = b.getAttribute(dataType);
-//         let num2 = a.getAttribute(dataType);
-//         if (op) {
-//             return num1 - num2;
-//         }
-//         return num2 - num1;
-//     }
-//     let sortedLi = massLi.sort(compare);
-//     ulList.append(...sortedLi);
-// };

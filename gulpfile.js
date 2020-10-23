@@ -12,7 +12,7 @@ const imagemin = require('gulp-imagemin');
 const svgstore = require("gulp-svgstore");
 const del = require('del');
 const sync = require("browser-sync").create();
-const ghpages = require("gh-pages");
+const ghpages = require("gulp-gh-pages");
 
 // Styles
 const styles = () => {
@@ -97,6 +97,13 @@ const clean = () => {
 }
 exports.clean = clean;
 
+// Deploy
+gulp.task('deploy', function () {
+  return gulp.src('./build/**/*')
+    .pipe(ghpages());
+});
+// ghpages.publish("build");
+
 // Copy
 const copy = () => {
   return gulp.src([
@@ -128,4 +135,3 @@ exports.build = gulp.series(
 exports.start = gulp.series(
   styles, server, watcher
 );
-ghpages.publish("build");
