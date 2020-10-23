@@ -1,0 +1,67 @@
+.modal {
+  position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 10;
+    display: none;
+    width: 80%;
+    max-width: 960px;
+    height: 560px;
+    background-color: @bg-light;
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+.modal-map--open {
+  display: block;
+  animation-name: bounce;
+  animation-duration: .6s;
+}
+.modal-map__close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 55px;
+  height: 55px;
+  background-color: @main-color-hover;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: .5;
+  transition: all .2s linear;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 30px;
+    background-color: @bg-light;
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+  &::before {
+    transform: translate(-50%,-50%) rotate(-45deg);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(-100%);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

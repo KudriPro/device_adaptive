@@ -1,0 +1,98 @@
+@font-face {
+  font-weight: 300;
+  font-family: "OpenSans";
+  font-style: normal;
+  src: url("../fonts/opensanslight.woff2") format("woff2"),
+       url("../fonts/opensanslight.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: "Gilroy";
+  src: url("../fonts/gilroylight.woff2") format("woff2"),
+       url("../fonts/gilroylight.woff") format("woff");
+  font-style: normal;
+}
+@font-face{
+  font-weight: 800;
+  font-family: "Gilroy";
+  font-style: normal;
+  src: url(../fonts/gilroyextrabold.woff2) format("woff2"),
+        url(../fonts/gilroyextrabold.woff) format("woff")
+}
+html, body {
+  position: relative;
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    font-family: 'Open Sans', Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 2;
+    color: @main-color-text;
+    background-color: @bg-light;
+    background-size: 1440px auto;
+    background-repeat: no-repeat;
+    background-position: center top;
+    scroll-behavior: smooth;
+    counter-reset: slides;
+}
+a {
+	text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+	position: absolute;
+	width: 1px;
+  height: 1px;
+  margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0, 0, 0, 0);
+	overflow: hidden;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+/* Для Firefox */
+input[type=number]{
+  -moz-appearance: textfield;
+}
+.back_to_top {
+  position: fixed;
+  bottom: 80px;
+  right: 40px;
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: @main-color-hover;
+  color: #444;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: 0 0 5px 0 @shadow;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  &:hover,
+  &:focus {
+    background: #e9ebec;
+  }
+  &--show {
+    opacity: 1;
+  }
+}
