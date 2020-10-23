@@ -24,7 +24,8 @@
   },
   "scripts": {
     "babel-node": "babel-node",
-    "babel": "babel source/js/main.js -d build/js"
+    "babel": "babel source/js/main.js -d build/js",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     "last 2 versions",

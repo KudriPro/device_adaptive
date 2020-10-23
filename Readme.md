@@ -15,9 +15,9 @@
 ## Ссылки 
 <table>
   <tr>
-  <th><a href="https://kudripro.github.io/my_health/">Главная страница 1200px</a></th>
-  <th><a href="https://kudripro.github.io/my_health/">Главная страница 768px</a></th>
-  <th><a href="https://kudripro.github.io/my_health/">Главная страница 320px</a></th>
+  <th><a href="https://kudripro.github.io/device_adaptive/">Главная страница 1200px</a></th>
+  <th><a href="https://kudripro.github.io/device_adaptive/">Главная страница 768px</a></th>
+  <th><a href="https://kudripro.github.io/device_adaptive/">Главная страница 320px</a></th>
   </tr>
   <tr valign="top">
     <td>
