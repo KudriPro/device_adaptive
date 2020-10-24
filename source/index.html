@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Device</title>
-  <link rel="preload" href="fonts/opensanslight.woff2" as="font">
-  <link rel="preload" href="fonts/gilroylight.woff2" as="font">
-  <link rel="preload" href="fonts/gilroyextrabold.woff2" as="font">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/gilroylight.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/gilroyextrabold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
   <meta name="format-detection" content="telephone=no">
   <link rel="icon" type="image/x-icon" href="">
@@ -72,9 +72,6 @@
       <section class="promo-slider">
         <h2 class="visually-hidden promo-slider-top">Выбор покупателей</h2>
         <div class="promo-slider__wrap container">
-          <div class="promo-slider__tabs"><button class="promo-slider__tab active-tab" data-tab="tab1">Слайд 1</button>
-            <button class="promo-slider__tab" data-tab="tab2">Слайд 2</button> <button class="promo-slider__tab"
-              data-tab="tab3">Слайд 3</button></div>
           <ul class="promo-slider__slides">
             <li class="promo-slider__slide active" id="tab1">
               <div class="promo-slider__slide-wrap">
@@ -149,6 +146,9 @@
               </div>
             </li>
           </ul>
+          <div class="promo-slider__tabs"><button class="promo-slider__tab active-tab" data-tab="tab1">Слайд 1</button>
+            <button class="promo-slider__tab" data-tab="tab2">Слайд 2</button> <button class="promo-slider__tab"
+              data-tab="tab3">Слайд 3</button></div>
         </div>
       </section>
       <section class="catalog">

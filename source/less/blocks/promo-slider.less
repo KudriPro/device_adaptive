@@ -41,7 +41,8 @@
   }
 }
 .promo-slider__tabs {
-  margin-left: 20px;
+  display: flex;
+  justify-content: center;
   margin-bottom: 15px;
 }
 .promo-slider__tab {
@@ -222,5 +223,10 @@
   }
   .promo-slider__specifications {
     margin-top: 45px;
+  }
+  .promo-slider__specifications {
+    & tr:first-child td {
+      font-family: "Gilroy","Arial",sans-serif;
+    }
   }
 }
