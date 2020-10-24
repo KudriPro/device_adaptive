@@ -12,8 +12,10 @@
       if (!navMain.classList.contains("main-header__product--opened")) {
         navMain.classList.add("main-header__product--opened");
         navMain.classList.remove("main-header__product--closed");
+        productNav.classList.remove("no-transition-resize");
       } else {
         navMain.classList.remove("main-header__product--opened");
         navMain.classList.add("main-header__product--closed");
+        productNav.classList.remove("no-transition-resize");
       }
     });</script><script src="js/main.js"></script><script src="js/picturefill.min.js"></script><script src="js/smoothscroll.min.js"></script></body></html>
