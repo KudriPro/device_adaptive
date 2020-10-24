@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Device</title>
-  <link rel="preload" href="fonts/opensanslight.woff2" as="font">
-  <link rel="preload" href="fonts/gilroylight.woff2" as="font">
-  <link rel="preload" href="fonts/gilroyextrabold.woff2" as="font">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/gilroylight.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/gilroyextrabold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preconnect" href="//api-maps.yandex.ru">
   <link rel="dns-prefetch" href="//api-maps.yandex.ru">
@@ -307,11 +307,7 @@
       </div>
     </footer>
     <section class="modal modal-map">
-      <div style="position:relative;overflow:hidden;"><a
-          href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps"
-          style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a
-          href="https://yandex.ru/maps/213/moscow/house/ulitsa_stroiteley_15/Z04YcwVpT0ADQFtvfXp5d3VrZA==/?ll=37.529624%2C55.687699&utm_medium=mapframe&utm_source=maps&z=16.72"
-          style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Строителей, 15 — Яндекс.Карты</a>
+      <div style="position:relative;overflow:hidden;">
         <iframe src="https://yandex.ru/map-widget/v1/-/CCQ~F4TVkD" width="960" height="560" frameborder="none"
           allowfullscreen="true" style="position:relative;"></iframe></div>
       <button class="modal-map__close" type="button">
@@ -332,17 +328,15 @@
       }
     })
     navToggle.addEventListener("click", function () {
-      if (navMain.classList.contains("main-header__product--closed")) {
-        productNav.classList.remove("no-transition-resize");
-        navMain.classList.remove("main-header__product--closed");
+      if (!navMain.classList.contains("main-header__product--opened")) {
         navMain.classList.add("main-header__product--opened");
+        navMain.classList.remove("main-header__product--closed");
       } else {
-        productNav.classList.remove("no-transition-resize");
-        navMain.classList.add("main-header__product--closed");
         navMain.classList.remove("main-header__product--opened");
-
+        navMain.classList.add("main-header__product--closed");
       }
-    });</script>
+    });
+  </script>
   <script src="js/main.js"></script>
   <script src="js/picturefill.min.js"></script>
   <script src="js/smoothscroll.min.js"></script>
