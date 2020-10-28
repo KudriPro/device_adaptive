@@ -37,3 +37,19 @@
     </td>
   </tr>
 </table>
+
+## PageSpeed Insights
+<table>
+  <tr>
+    <th>Для мобильных</th>
+    <th>Для компьютеров</th>
+  </tr>
+  <tr valign="top">
+    <td>
+        <img src="source/img/decor/mobile.PNG" width="300" alt="PageSpeed Insights Mobile">
+    </td>
+    <td>
+        <img src="source/img/decor/desktop.PNG" width="300" alt="PageSpeed Insights Desktop> 
+    </td>
+  </tr>
+</table>
