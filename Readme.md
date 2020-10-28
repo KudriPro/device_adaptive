@@ -49,7 +49,7 @@
         <img src="source/img/decor/mobile.PNG" width="300" alt="PageSpeed Insights Mobile">
     </td>
     <td>
-        <img src="source/img/decor/desktop.PNG" width="300" alt="PageSpeed Insights Desktop> 
+        <img src="source/img/decor/desktop.PNG" width="300" alt="PageSpeed Insights Desktop"> 
     </td>
   </tr>
 </table>
